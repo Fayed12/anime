@@ -12,6 +12,8 @@
 :root{
     --main-color:#2196f3;
     --main-trasition: .3s;
+    --main-padding:100px;
+
 }
 
 ul{
@@ -68,6 +70,7 @@ html{
     font-size: 25px;
     font-weight: 600;
     letter-spacing: .5px;
+    text-transform: uppercase;
 }
 
 .main-head::before ,
@@ -83,11 +86,13 @@ html{
 .main-head::before{
     top: 50%;
     transform: translateY(-50%);
+
 }
 
 .main-head::after{
     bottom: 50%;
     transform: translatey(50%);
+
 }
 .main-head::before{
     left: -20px;
@@ -97,7 +102,7 @@ html{
 }
 
 .main-head:hover{
-    transition-delay: .8s;
+    transition-delay: 1s;
     transition-duration: .5s;
     color: white;
     border-color:white ;
@@ -180,9 +185,9 @@ header .container .nav .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--main-color);
-    font-size: 25px;
-    text-transform: uppercase;
+}
+header .container .nav .logo img{
+    width: 50px;
 }
 
 header .container .nav .links{
@@ -380,6 +385,10 @@ header .container .nav .links .menu  ul > li > a> i{
     letter-spacing: -1px;
 }
 
+.header-section .container .text h2 span{
+    color: var(--main-color);
+}
+
 .header-section .container .text p{
     
     font-size: 22px;
@@ -459,8 +468,8 @@ header .container .nav .links .menu  ul > li > a> i{
 /* start Articles section   */
 
 .articles{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
 }
 
 
@@ -481,7 +490,13 @@ header .container .nav .links .menu  ul > li > a> i{
 }
 
 .articles .container .article-content .card:hover{
-    transform: translateY(-10px);
+    animation: card-move 1s linear infinite alternate;
+}
+
+@keyframes card-move {
+    to{
+        transform: translatey(-10px);
+    }
 }
 
 .articles .container .article-content  .card .tex{
@@ -508,6 +523,7 @@ header .container .nav .links .menu  ul > li > a> i{
     margin-top: 10px;
     color: #777;
 }
+
 .articles .container .article-content .card a{
     display: inline-block;
     text-decoration: none;
@@ -526,12 +542,6 @@ header .container .nav .links .menu  ul > li > a> i{
 
 }
 
-/* @keyframes move-card {
-    0%{
-
-    }
-} */
-
 @keyframes arow-move {
     0%,10%,20%,50%,80% ,100%{
         right: 15px;
@@ -541,7 +551,7 @@ header .container .nav .links .menu  ul > li > a> i{
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:600px) and (max-width:991px) {
     .articles .container .article-content{
         display: flex;
         flex-wrap: wrap;
@@ -563,7 +573,6 @@ header .container .nav .links .menu  ul > li > a> i{
         flex-basis: 31%;
     }
     .articles .container .article-content .card:nth-child(odd){
-        /* margin-right:2% ; */
         gap: 2%;
 
     }
@@ -578,10 +587,252 @@ header .container .nav .links .menu  ul > li > a> i{
         flex-basis: 22%;
     }
     .articles .container .article-content .card:nth-child(odd){
-        /* margin-right:2% ; */
         gap: 3%;
 
     }
 }
 
 /* end Articles section   */
+
+/* ================================================================================================================= */
+
+/* start Gallery section */
+
+.gallery{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: #ececec;
+}
+
+.gallery .container .gallery-content{
+    margin-top: 50px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 50px;
+}
+
+.gallery .container .all{
+    padding: 15px;
+    background-color: white;
+    overflow: hidden;
+    height: 260px;
+}
+
+.gallery .container .all .image{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery .container .image::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background-color: rgba(255 255 255 / 20%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    opacity: 0;
+    transition:var(--main-trasition);
+}
+
+.gallery .container .image:hover::before{
+    animation: image-move .7s ;
+    z-index: 10;
+}
+
+@keyframes image-move {
+    0% , 50%{
+        opacity: 1;
+    }
+    100%{
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+.gallery .container .all .image img{
+    max-width: 100%;
+    height: 100%;
+    transition: var(--main-trasition);
+}
+
+.gallery .container .all .image:hover img{
+    transform:  rotate(5deg) scale(1.2);
+}
+
+/* end Gallery section */
+
+/* start features setion */
+
+.features{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.features-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.features .features-content .card{
+    position: relative;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.features .features-content .card img{
+    max-width: 100%;
+    height: 250px;
+}
+
+.features .features-content .card .image{
+    position: relative;
+}
+
+.features .features-content .card .image::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.features .features-content .card-one .image::before{
+    background-color: rgb(255 0 0 / 60%);
+}
+.features .features-content .card-two .image::before{
+    background-color: rgb(0 128 0 / 60%);
+}
+.features .features-content .card-three .image::before{
+    background-color:rgb(3 169 244 / 60%) ;
+}
+
+.features .features-content .card .image::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style:solid ;
+    border-color:transparent transparent white transparent  ;
+    border-width: 0px 0px 80px 500px;
+    transition: var(--main-trasition);
+}
+
+.features .features-content .card:hover .image::after{
+    border-width: 0px 500px 80px 0px;
+}
+
+.features .features-content .card .text{
+    text-align: center;
+}
+
+.features .features-content .card .text h3{
+    font-size:40px ;
+    padding: 30px 0;
+    position: relative;
+}
+
+.features .features-content .card .text h3::before{
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 3px;
+    background-color: black;
+    bottom: 20px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.features .features-content .card-one .text h3::before{
+    background-color: red;
+}
+.features .features-content .card-two .text h3::before{
+    width: 50px;
+    background-color: green;
+}
+.features .features-content .card-three .text h3::before{
+    background-color: rgb(3, 169, 244);
+}
+
+.features .features-content .card .text p{
+    font-size: 20px;
+    color: #777;
+    margin: 30px 0 40px 0;
+}
+
+.features .features-content .card .text a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    margin: 40px 0;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.features .features-content .card .text a::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; 
+    z-index: -10;
+    opacity: 0;
+    transition: var(--main-trasition);
+}
+
+.features .features-content .card-one .text a::before{
+    background-color: red;
+}
+
+.features .features-content .card-two .text a::before{
+    background-color: green;
+}
+
+.features .features-content .card-three .text a::before{
+    background-color: rgb(3, 169, 244);
+}
+
+.features .features-content .card:hover .text a::before{
+    opacity: 1;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.features .features-content .card:hover .text a{
+    color: white;
+    border-radius: 0;
+    border: none;
+}
+
+.features .features-content .card-one .text a{
+    color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.features .features-content .card-two .text a{
+    color: green;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+.features .features-content .card-three .text a{
+    color: rgb(3, 169, 244);
+    border: 2px solid rgb(3, 169, 244);
+    border-radius: 5px;
+}
+
+/* end features setion */
