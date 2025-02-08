@@ -13,6 +13,7 @@
     --main-color:#2196f3;
     --main-trasition: .3s;
     --main-padding:100px;
+    --main-bacground-color:#ececec;
 
 }
 
@@ -64,6 +65,8 @@ html{
     margin: auto;
     border: 2px solid;
     position: relative;
+    z-index: 10;
+    margin-bottom: 80px;
 }
 .main-head h3{
     padding: 5px;
@@ -601,7 +604,8 @@ header .container .nav .links .menu  ul > li > a> i{
 .gallery{
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
-    background-color: #ececec;
+    background-color: var(--main-bacground-color);
+    z-index: -10;
 }
 
 .gallery .container .gallery-content{
@@ -667,6 +671,8 @@ header .container .nav .links .menu  ul > li > a> i{
 
 /* end Gallery section */
 
+/* ========================================================================================================================= */
+
 /* start features setion */
 
 .features{
@@ -683,13 +689,16 @@ header .container .nav .links .menu  ul > li > a> i{
 
 .features .features-content .card{
     position: relative;
-    border: 1px solid black;
+    border: 1px solid #777;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .features .features-content .card img{
     max-width: 100%;
     height: 250px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .features .features-content .card .image{
@@ -836,3 +845,249 @@ header .container .nav .links .menu  ul > li > a> i{
 }
 
 /* end features setion */
+
+/* =========================================================================================================== */
+
+/* start Testimonials section */
+
+.Testimonials{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-bacground-color);
+}
+
+.Testimonials .Testimonials-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.Testimonials .Testimonials-content .testcard{
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.Testimonials .Testimonials-content .testcard .image {
+    padding: 6px;
+    background-color: var(--main-bacground-color);
+    position: absolute;
+    top: -25%;
+    right: -15px;
+    border-radius: 50%;
+}
+
+.Testimonials .Testimonials-content .testcard .image img{
+    width: 70px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.Testimonials .Testimonials-content .testcard  h2{
+    font-size: 21px;
+    margin: 0 0 10px 0;
+}
+
+.Testimonials .Testimonials-content .testcard:hover h2{
+    animation: test-move 1s linear infinite alternate;
+}
+
+.Testimonials .Testimonials-content .testcard p:first-of-type{
+    color: #777;
+    margin: 0 0 10px 0;
+}
+.Testimonials .Testimonials-content .testcard .icon{
+    margin: 0 0 10px 0;
+}
+
+.Testimonials .Testimonials-content .testcard .icon i:not([class *= regular]){
+    color: gold;
+}
+
+.Testimonials .Testimonials-content .testcard p:last-of-type{
+    color: #777;
+    max-width: 300px;
+}
+
+@keyframes test-move {
+    to{
+        transform: translateY(-5px);
+    }
+}
+
+/* end Testimonials section */
+
+/* ===================================================================================================== */
+
+/* start team members section */
+
+.Team-Members{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.Team-Members .container .team-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px;
+}
+
+.Team-Members .container .team-content .team-card{
+    padding: 15px;
+    position: relative;
+}
+
+.Team-Members .container .team-content .team-card::before{
+    content: "";
+    width: 80%;
+    height: 100%;
+    background-color: #f3f3f3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    border-radius: 15px;
+}
+
+.Team-Members .container .team-content .team-card::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(228, 228, 228);
+    top: 0;
+    right: 0;
+    z-index: -10;
+    transition: var(--main-trasition);
+    border-radius: 15px;
+}
+
+.Team-Members .container .team-content .team-card:hover::after{
+    width: 80%;
+}
+
+.Team-Members .container .team-content .team-card .image-icon{
+    gap: 20px;
+    display: flex;
+}
+
+.Team-Members .container .team-content .team-card .image-icon .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Team-Members .container .team-content .team-card .image-icon .icon i:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.Team-Members .container .team-content .team-card .image-icon .icon i{
+    color: #777;
+}
+
+.Team-Members .container .team-content .team-card .image-icon img{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    transition: var(--main-trasition);
+}
+
+.Team-Members .container .team-content .team-card:hover img{
+    filter: grayscale(100%);
+}
+
+.Team-Members .container .team-content .team-card .text{
+    padding-left: 90px ;
+    margin: 30px 0 0 0;
+}
+
+.Team-Members .container .team-content .team-card .text h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.Team-Members .container .team-content .team-card .text p{
+    margin: 10px 0 10px 0;
+}
+
+/* end team members section */
+
+/* ======================================================================================================= */
+
+/* start Services section */
+
+
+.Services{
+    padding-top:var(--main-padding) ;
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-bacground-color);
+}
+
+.Services .container .Services-content{
+    display: grid;
+    grid-template-columns:repeat(auto-fill ,minmax(300px , 1fr) ) ;
+    gap: 20px;
+}
+
+.Services .container .Services-content .Services-card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    counter-increment: section;
+    position: relative;
+}
+
+.Services .container .Services-content .Services-card i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d5d5d5;
+}
+
+.Services .container .Services-content .Services-card h3{
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.Services .container .Services-content .Services-card  .text{
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0;
+    /* counter-reset: section; */
+    /* counter-increment: section; */
+}
+
+.Services .container .Services-content .Services-card  .text::before{
+    content: counter(section);
+    width: 60px;
+    height: 40px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    border-bottom-left-radius: 10px;
+}
+
+.Services .container .Services-content .Services-card .text a{
+    position: absolute;
+    display: block;
+    right: 10px;
+    text-decoration: none;
+    color: var(--main-color);
+    /* padding-bottom: 20; */
+}
+/* end Services section */
