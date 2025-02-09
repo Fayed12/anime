@@ -126,7 +126,7 @@ html{
     20%{
         top: -30px;
     }
-    70%{
+    50%{
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -148,7 +148,7 @@ html{
     20%{
         bottom: -30px;
     }
-    70%{
+    50%{
         bottom: 0;
         right: 50%;
         transform: translateX(50%);
@@ -1039,6 +1039,35 @@ header .container .nav .links .menu  ul > li > a> i{
     padding: 15px;
     counter-increment: section;
     position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px 5px #d5d5d5;
+    transition: var(--main-trasition);
+}
+
+.Services .container .Services-content .Services-card:hover{
+    animation: card-move .8s linear infinite alternate ;
+}
+
+@keyframes card-move {
+    to{
+        transform: translateY(-5px);
+    }
+}
+
+.Services .container .Services-content .Services-card::before{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: var(--main-color);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-trasition);
+}
+
+.Services .container .Services-content .Services-card:hover::before{
+    width: 100%;
 }
 
 .Services .container .Services-content .Services-card i{
@@ -1062,8 +1091,6 @@ header .container .nav .links .menu  ul > li > a> i{
     position: relative;
     padding-bottom: 20px;
     margin: 0;
-    /* counter-reset: section; */
-    /* counter-increment: section; */
 }
 
 .Services .container .Services-content .Services-card  .text::before{
@@ -1080,6 +1107,18 @@ header .container .nav .links .menu  ul > li > a> i{
     color: white;
     font-size: 15px;
     border-bottom-left-radius: 10px;
+    padding-right: 10px;
+}
+
+.Services .container .Services-content .Services-card  .text::after{
+    content: "";
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    background-color: #d5d5d5;
+    left: 40px ;
+    bottom: -15px;
+    transform: skewX(-30deg);
 }
 
 .Services .container .Services-content .Services-card .text a{
@@ -1088,6 +1127,226 @@ header .container .nav .links .menu  ul > li > a> i{
     right: 10px;
     text-decoration: none;
     color: var(--main-color);
-    /* padding-bottom: 20; */
 }
+
 /* end Services section */
+
+/* ====================================================================================================== */
+
+/* start Skills section */
+
+.Skills{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.Skills .container .skills-content{
+    display: flex;
+    gap: 15%;
+}
+
+.Skills .container .skills-content .image img{
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+    left:20%;
+}
+
+@media (max-width:992px) {
+    .Skills .container .skills-content .image img{
+        display: none;
+    }
+}
+
+.Skills .container .skills-content .stats {
+    position: relative;
+    width: 100%;
+}
+
+.Skills .container .skills-content .stats .stat-all .prog{
+    width: 90%;
+    height: 30px;
+    background-color: #EEE;
+    margin: 20px 0;
+    position: relative;
+}
+
+.Skills .container .skills-content .stats .stat-all .prog span{
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.Skills .container .skills-content .stats .stat-all .prog span::before{
+    content: attr(data-width);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid var(--main-bacground-color);
+    border-radius: 5px;
+    color: var(--main-color);
+    font-weight: 700;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+/* end Skills section */
+
+/* ============================================================================================= */
+
+/* start work section  */
+
+.work{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-bacground-color);
+}
+
+.work .container .work-content{
+    display: flex;
+    gap: 10%;
+}
+
+.work .container .work-content .image{
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.work .container .work-content img{
+    width: 500px;
+    border-radius: 20px;
+}
+
+@media (max-width:992px) {
+    .work .container .work-content .image{
+        display: none;
+    }
+    .work .container .work-content .work-detail{
+        margin-left:auto ;
+        margin-right: auto;
+    }
+}
+
+.work .container img{
+    transition: var(--main-trasition);
+}
+.work .container img:hover{
+    filter: grayscale(100%);
+}
+
+.work .container .work-content .work-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.work .container .work-content .work-detail .card{
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.work .container .work-content .work-detail .card::before{
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: var(--main-bacground-color);
+    top: 0;
+    left: 0;
+    transition: var(--main-trasition);
+}
+
+.work .container .work-content .work-detail .card:hover::before{
+    width: 100%;
+    z-index: -10;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.work .container .work-content .work-detail .card:hover .text p {
+    color: black;
+}
+
+.work .container .work-content .work-detail .card:not(:last-child){
+    margin-bottom: 40px;
+}
+
+.work .container .work-content .work-detail .card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.work .container .work-content .work-detail .card .text{
+    margin-left: 30px;
+}
+
+.work .container .work-content .work-detail .card .text h3{
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.work .container .work-content .work-detail .card .text p{
+    max-width: 350px;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.3;
+    transition: var(--main-trasition);
+}
+
+.work .container .button{
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .container .button a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 800;
+    background-color: white;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    transition: var(--main-trasition);
+}
+
+.work .container .button a:hover{
+    color: white;
+    background-color: var(--main-color);
+    border-color:white ;
+}
+/* end work section  */
+
+/* ============================================================================================================== */
+
+/* start Events section */
+
+.event{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+/* end Events section */
