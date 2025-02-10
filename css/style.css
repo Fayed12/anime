@@ -1349,4 +1349,164 @@ header .container .nav .links .menu  ul > li > a> i{
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
 }
+
+.event .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event .container img{
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+
+.event .container .data-title{
+    flex: 1;
+    margin-left: 50px;
+}
+
+@media (max-width:992px) {
+    .event .container{
+        display: block;
+    }
+    .event .container img{
+        display: none;
+    }
+    .event .container .data-title{
+        margin-left: 0px;
+    }
+}
+.event .container .data-title .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.event .container .data-title .card{
+    border: 1px solid #777;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 70px;
+    transition: var(--main-trasition);
+}
+
+.event .container .data-title .card span{
+    display: block;
+}
+
+.event .container .data-title .card span:first-child{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--main-color);margin-bottom: 20px;
+}
+
+.event .container .data-title .card span:last-child{
+    color: #777;
+    border-top: 1px solid;
+    padding: 5px;
+    transition: var(--main-trasition);
+}
+
+.event .container .data-title .card:hover{
+    border-color: var(--main-color);
+} 
+
+.event .container .data-title .card:hover span:last-child{
+    border-color: var(--main-color);
+} 
+
+.event .container .data-title  .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.event .container .data-title  .title h3{
+    font-size: 25px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.event .container .data-title  .title p{
+    max-width: 80%;
+    color: #555;
+    line-height: 1.5;
+}
+
+.event .container .form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.event .container .form form{
+    padding: 15px;
+    background-color: var(--main-bacground-color);
+    border-radius: 25px;
+}
+
+.event .container .form form .email{
+    outline: none;
+    border: none;
+    width: 260px;
+    height: 50px;
+    border-radius: 25px;
+    text-indent: 10px;
+    caret-color: var(--main-color)
+}
+
+.event .container .form form .email::placeholder{
+    color: var(--main-color);
+}
+
+.event .container .form form .button{
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width:768px) {
+    .event .container .form form{
+        padding: 10px;
+    }
+    .event .container .form form .email{
+        width: 220px;
+    }
+    .event .container .form form .button{
+        width: 80px;
+        font-size: 15px;
+        border-radius: 20px;
+    }
+}
+
 /* end Events section */
+
+/* ============================================================================================== */
+
+/* start Pricing section */
+
+.Pricing{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-bacground-color);
+}
+
+.Pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+}
+
+/* end Pricing section */
