@@ -1507,6 +1507,136 @@ header .container .nav .links .menu  ul > li > a> i{
 .Pricing .container {
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px;
+}
+
+.Pricing .container .card{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    margin-top: 50px;
+}
+
+.Pricing .container .advanced-card {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+@media (max-width:992px) {
+    .Pricing .container .card{
+        margin-top: 20px;
+    }
+    .Pricing .container .advanced-card {
+        margin-top: 20px;
+        margin-bottom: initial;
+    }
+}
+
+.Pricing .container .card h2{
+    margin: 10px 0 30px;
+}
+
+.Pricing .container .card img{
+    width: 70px;
+}
+
+.Pricing .container .card span{
+    display: block;
+}
+
+.Pricing .container .card .price{
+    margin-top: 35px;
+    padding-bottom: 20px;
+}
+
+.Pricing .container .card .price span:first-child{
+    font-size: 35px;
+    color: var(--main-color);
+    font-weight: 900;
+}
+
+.Pricing .container .card .price span:last-child{
+    margin-top: 10px;
+    color: #777;
+}
+
+.Pricing .container .card .detail{
+    text-align: left;
+}
+
+.Pricing .container .card .detail p {
+    padding: 20px 10px;
+    border-top: 1px solid;
+    border-color: var(--main-bacground-color);
+}
+.Pricing .container .card .detail p i {
+    color: var(--main-color);
+    margin-right: 10px;
+}
+
+.Pricing .container .card .button{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.Pricing .container .card .button a{
+    text-decoration: none;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    transition: var(--main-trasition);
+}
+
+.Pricing .container .card .button a:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.Pricing .container .advanced-card{
+    position: relative;
+}
+
+.Pricing .container .advanced-card::before{
+    content: "Most Popular";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: var(--main-color);
+    color: white;
+    width: 130px;
+    padding: 5px;
+    transform: rotatez(90deg) translateX(58px) translateY(-40px);
+    font-size: 20px;
+    font-weight: 800;
+    padding-right: 18px;
+}
+
+.Pricing .container .advanced-card::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    top: 140px;
+    right: 32px;
+    transform: rotate(45deg);
 }
 
 /* end Pricing section */
+
+/* ================================================================================================== */
+
+/* start  Videos section */
+
+.video{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+/* end  Videos section */
