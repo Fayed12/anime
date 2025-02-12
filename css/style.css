@@ -942,7 +942,7 @@ header .container .nav .links .menu  ul > li > a> i{
 
 .Team-Members .container .team-content .team-card::before{
     content: "";
-    width: 80%;
+    width: 82%;
     height: 100%;
     background-color: #f3f3f3;
     position: absolute;
@@ -966,12 +966,13 @@ header .container .nav .links .menu  ul > li > a> i{
 }
 
 .Team-Members .container .team-content .team-card:hover::after{
-    width: 80%;
+    width: 82%;
 }
 
 .Team-Members .container .team-content .team-card .image-icon{
     gap: 20px;
     display: flex;
+    position: relative;
 }
 
 .Team-Members .container .team-content .team-card .image-icon .icon{
@@ -993,10 +994,14 @@ header .container .nav .links .menu  ul > li > a> i{
     height: 300px;
     border-radius: 10px;
     transition: var(--main-trasition);
+    position: relative;
+    right: -50px;
+    transition: var(--main-trasition);
 }
 
 .Team-Members .container .team-content .team-card:hover img{
     filter: grayscale(100%);
+    right: 0;
 }
 
 .Team-Members .container .team-content .team-card .text{
@@ -1390,7 +1395,7 @@ header .container .nav .links .menu  ul > li > a> i{
     padding: 5px;
     border-radius: 5px;
     text-align: center;
-    width: 70px;
+    min-width: 70px;
     transition: var(--main-trasition);
 }
 
@@ -1428,7 +1433,7 @@ header .container .nav .links .menu  ul > li > a> i{
 }
 
 .event .container .data-title  .title h3{
-    font-size: 25px;
+    font-size: 28px;
     color: var(--main-color);
     margin-bottom: 20px;
 }
@@ -1437,6 +1442,7 @@ header .container .nav .links .menu  ul > li > a> i{
     max-width: 80%;
     color: #555;
     line-height: 1.5;
+    text-align: center;
 }
 
 .event .container .form{
@@ -1639,4 +1645,536 @@ header .container .nav .links .menu  ul > li > a> i{
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
 }
+
+.video .container {
+    display: flex;
+}
+
+.video .container .text {
+    border: 1px solid;
+    border-color: #cccccc;
+    min-width: 300px;
+}
+
+.video .container .text .title{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 10px 20px;
+    background-color: var(--main-bacground-color);
+}
+
+.video .container .text .title h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.video .container .text .title i {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.video .container .text .list ul li{
+    padding: 10px;
+    border-top: 1px solid #cccccc;
+    transition: var(--main-trasition);
+}
+
+.video .container .text .list ul li:hover{
+    background-color: var(--main-bacground-color);
+    color: var(--main-color);
+}
+
+.video .container .text .list ul li span{
+    display: block;
+    margin: 10px 0;
+    color: #777;
+}
+
+.video .container .image{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--main-bacground-color);
+}
+
+.video .container .image img{
+    width: 100%;
+    /* height: 450px; */
+    border-radius: 15px;
+}
+
+.video .container .image p{
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media (max-width:992px) {
+    .video .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .video .container .image img{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+
 /* end  Videos section */
+
+/* ========================================================================== */
+
+/* start stats section */
+
+.Awesome-stats{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../images/stats.avif);
+    background-size: cover;
+    position: relative;
+    /* display: flex; */
+}
+
+.Awesome-stats::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(210 208 208 / 80%);
+    /* z-index: -10; */
+}
+
+.Awesome-stats .title{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.Awesome-stats .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    text-align: center;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.Awesome-stats .container .box {
+    background-color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.Awesome-stats .container .box::before{
+    content: "";
+    width: 3px ;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    transition: calc(var(--main-trasition) + .5s);
+}
+
+.Awesome-stats .container .box::after{
+    content: "";
+    width: 3px ;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--main-color);
+    transition: calc(var(--main-trasition) + .5s);
+}
+
+.Awesome-stats .container .box:hover::before ,
+.Awesome-stats .container .box:hover::after{
+    height: 100%;
+}
+
+.Awesome-stats .container .box i {
+    display: block;
+    margin: 10px 0px;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.Awesome-stats .container .box  span{
+    display: block;
+} 
+
+.Awesome-stats .container .box span:nth-child(2) {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 15px 0px;
+}
+
+.Awesome-stats .container .box  span:last-child{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+    font-style: italic;
+}
+
+/* end stats section */
+
+/* ========================================================================================== */
+
+/* start login page */
+
+.login{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background: linear-gradient(to right, white 55%, var(--main-color));
+    min-height: 100vh;
+}
+
+.login .container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    min-height: 70vh;
+    border-radius: 20px;
+    padding: 0px;
+    box-shadow: 0 0 10px 0px #999;
+}
+
+.login .container .part-one{
+    flex-basis: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.login .container .part-one h2{
+    font-size: 35px;
+    color: var(--main-color);
+    font-weight: 800;
+    margin: 15px 0 30px;
+}
+
+.login .container .part-one .icon {
+    margin: 30px 0px ;
+}
+
+.login .container .part-one .icon i{
+    border: 2px solid var(--main-bacground-color);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.login .container .part-one  span{
+    display: block;
+    font-size: 15px;
+    color: #888;
+    margin: 0 0 20px;
+}
+
+.login .container .part-one .sign-up{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+}
+.login .container .part-one .sign-up form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.login .container .part-one .sign-up form input{
+    outline: none;
+    border: none;
+    background-color: var(--main-bacground-color);
+    margin: 0 0 20px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.login .container .part-one .sign-up .button{
+    width: 110px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.login .container .part-two{
+    flex-basis: 50%;
+    background-image: url(../images/login1.webp);
+    background-size: cover;
+    padding: 15px ;
+    width: 100%;
+    border-radius: 20px;
+    border-top-left-radius: 35%;
+    border-bottom-left-radius: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    animation: image-move 10s linear infinite;
+}
+
+@keyframes image-move {
+    0% , 100%{
+        background-image: url(../images/login1.webp);
+    }
+    50%{
+        background-image: url(../images/login2.webp);
+        background-size: cover;
+    }
+}
+
+.login .container .part-two::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgb(33 150 243 / 70%);
+    border-radius: 20px;
+    border-top-left-radius: 35%;
+    border-bottom-left-radius: 35%;
+    z-index: -1;
+}
+
+
+.login .container .part-two h2{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 2.3px;
+    margin-bottom: 20px;
+}
+
+.login .container .part-two p{
+    text-align: center;
+    color: rgb(255 255 255 / 60%);
+}
+
+@media (max-width:992px) {
+    .login .container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .login .container .part-one{
+        flex-basis: 100%;
+    }
+    .login .container .part-two{
+        flex-basis: 60%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0px;
+        border-bottom-right-radius: 40%;
+        border-bottom-left-radius: 40%;
+    }
+    .login .container .part-two h2{
+        font-size: 18px;
+        margin-bottom: 10px ;
+    }
+    .login .container .part-two p{
+        font-size: 13px;
+    }
+    .login .container .part-two::before{
+        border-radius: 0px;
+        border-bottom-right-radius: 40%;
+        border-bottom-left-radius: 40%;
+    }
+}
+
+@media (max-width:500px) {
+    .login .container .part-one .sign-up form {
+        width: 100%;
+    }
+}
+
+/* end login page */
+
+/* =================================================================================================== */
+
+/* start footer section */
+
+footer{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-color);
+    color: white;
+    position: relative;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+    gap: 3%;
+}
+
+footer .container .box{
+    padding: 10px;
+    text-align: center;
+}
+
+footer .container .box:first-child{
+    position: relative;
+}
+
+footer .container .box:first-child h3{
+    font-size: 25px;
+    margin: 10px 0 30px;
+}
+
+footer .container .box:first-child .icon{
+    margin-bottom: 30px;
+}
+
+footer .container .box:first-child .icon i{
+    padding: 5px;
+    background-color: var(--main-bacground-color);
+    border-radius: 10px;
+    color: black;
+}
+
+footer .container .box:first-child .text{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 60%;
+    color: rgb(255 255 255 / 50%);
+}
+
+footer .container .box:nth-child(2){
+    position: relative;
+    text-align: start;
+}
+
+footer .container .box:nth-child(2) ul{
+    width: 200px;
+}
+
+footer .container .box:nth-child(2) ul li:not(:last-child){
+    padding: 0 0 13px;
+    margin-bottom: 13px;
+    border-bottom: 2px solid rgb(255 255 255 / 50%);
+}
+
+footer .container .box:nth-child(2) ul li a{
+    text-decoration: none;
+    color: white;
+    transition: var(--main-trasition);
+    display: block;
+}
+
+footer .container .box:nth-child(2) ul li{
+    transition: var(--main-trasition);
+    position: relative;
+}
+
+footer .container .box:nth-child(2) ul li a:hover{
+    transform: translateX(15px);
+}
+
+footer .container .box:nth-child(2) ul li a i {
+    margin-right: 10px;
+    color: black;
+}
+
+footer .container .box:nth-child(3){
+    text-align: start;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .container .box:nth-child(3) .details{
+    display: flex;
+    height: 60px;
+}
+footer .container .box:nth-child(3) i{
+    font-size: 20px;
+    margin-right: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container .box:nth-child(3) p{
+    font-size: 18px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:767px) {
+    footer .container .box:nth-child(3) .details{
+        display: block;
+    }
+    footer .container .box:nth-child(3) i{
+        padding: 5px 0px;
+    }
+}
+
+
+footer .container .box:nth-child(4){
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(80px ,1fr));
+    gap: 10px;
+}
+footer .container .box .image img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:767px) {
+    footer .container .box{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+footer .foot{
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
+    background-color: #333;
+    width: 100%;
+}
+
+footer .foot p{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* end footer section */
+
