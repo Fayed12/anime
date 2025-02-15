@@ -2024,14 +2024,14 @@ header .container .nav .links .menu  ul > li > a> i{
 footer{
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
-    background-color: var(--main-color);
+    background-color: #333;
     color: white;
     position: relative;
 }
 
 footer .container{
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+    grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
     gap: 3%;
 }
 
@@ -2057,7 +2057,7 @@ footer .container .box:first-child .icon i{
     padding: 5px;
     background-color: var(--main-bacground-color);
     border-radius: 10px;
-    color: black;
+    color: var(--main-color);
 }
 
 footer .container .box:first-child .text{
@@ -2075,6 +2075,9 @@ footer .container .box:nth-child(2){
 
 footer .container .box:nth-child(2) ul{
     width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 footer .container .box:nth-child(2) ul li:not(:last-child){
@@ -2101,12 +2104,11 @@ footer .container .box:nth-child(2) ul li a:hover{
 
 footer .container .box:nth-child(2) ul li a i {
     margin-right: 10px;
-    color: black;
+    color: var(--main-color);
 }
 
 footer .container .box:nth-child(3){
     text-align: start;
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2119,7 +2121,7 @@ footer .container .box:nth-child(3) .details{
 footer .container .box:nth-child(3) i{
     font-size: 20px;
     margin-right: 10px;
-    color: black;
+    color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2141,7 +2143,6 @@ footer .container .box:nth-child(3) p{
     }
 }
 
-
 footer .container .box:nth-child(4){
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(80px ,1fr));
@@ -2158,6 +2159,14 @@ footer .container .box .image img{
         left: 50%;
         transform: translateX(-50%);
     }
+    footer .container .box ul{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    footer .container{
+        margin-bottom: 30px;
+    }
 }
 
 footer .foot{
@@ -2166,6 +2175,7 @@ footer .foot{
     height: 60px;
     background-color: #333;
     width: 100%;
+    border-top: 2px solid #777;
 }
 
 footer .foot p{
@@ -2176,5 +2186,15 @@ footer .foot p{
     text-align: center;
 }
 
+footer .foot p span {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
 /* end footer section */
 
+/* ==================================================================================================== */
+
+/* DONE */
