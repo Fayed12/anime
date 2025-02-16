@@ -942,7 +942,7 @@ header .container .nav .links .menu  ul > li > a> i{
 
 .Team-Members .container .team-content .team-card::before{
     content: "";
-    width: 82%;
+    width: 100%;
     height: 100%;
     background-color: #f3f3f3;
     position: absolute;
@@ -950,6 +950,7 @@ header .container .nav .links .menu  ul > li > a> i{
     right: 0;
     z-index: -10;
     border-radius: 15px;
+    transition: var(--main-trasition);
 }
 
 .Team-Members .container .team-content .team-card::after{
@@ -965,7 +966,12 @@ header .container .nav .links .menu  ul > li > a> i{
     border-radius: 15px;
 }
 
+.Team-Members .container .team-content .team-card:hover::before{
+    width: 82%;
+}
+
 .Team-Members .container .team-content .team-card:hover::after{
+    transition-delay: .3s;
     width: 82%;
 }
 
@@ -1002,6 +1008,7 @@ header .container .nav .links .menu  ul > li > a> i{
 .Team-Members .container .team-content .team-card:hover img{
     filter: grayscale(100%);
     right: 0;
+    transition-delay: var(--main-trasition);
 }
 
 .Team-Members .container .team-content .team-card .text{
@@ -1386,17 +1393,28 @@ header .container .nav .links .menu  ul > li > a> i{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    /* gap: 30px; */
     margin: 30px 0;
+    width: 100%;
 }
 
 .event .container .data-title .card{
     border: 1px solid #777;
-    padding: 5px;
+    padding: 3px;
     border-radius: 5px;
     text-align: center;
     min-width: 70px;
     transition: var(--main-trasition);
+}
+
+@media (max-width:768px) {
+    .event .container .data-title .card{
+        min-width: 23%;
+    }
+}
+
+.event .container .data-title .card:not(:last-child){
+    margin-right: 2%;
 }
 
 .event .container .data-title .card span{
