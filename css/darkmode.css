@@ -1,0 +1,173 @@
+.darkmode{
+    --main-color:#2196f3;
+    --main-bacground-color:black;
+    --color-white:black;
+    --section-bacground:black;
+    --sub-color:#777;
+}
+body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+a {
+    color: #bb86fc;
+}
+.card {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+/* start main header */
+.main-head:hover{
+    color: white;
+    border-color:white;
+}
+/* end main header */
+/* start header section */
+header{
+    box-shadow: 0 0 10px 10px #1e1e1e;
+    position: relative;
+    z-index: 100;
+}
+header .container .nav .links > li > a{
+    color: white;
+}
+header .container .nav .links > li > a::before{
+    background-color:#1a1919 ;
+    border-top: 3px solid white;
+}
+@media (min-width:768px) and (max-width:991px) {
+    header .container .nav .links .menu {
+        background-color: white !important;
+    }
+}
+@media (max-width:767px) {
+    header .container .nav .links .last-link .menu {
+        background-color: white !important;
+    }
+}
+/* end header section */
+/* start Articles section   */
+.articles .container .article-content .card{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 2px 15px;
+}
+/* end Articles section   */
+/* start features setion */
+.features .features-content .card .image::after{
+    border-color:transparent transparent #1e1e1e transparent  ;
+}
+.features .features-content .card:hover .text a{
+    color: white;
+}
+/* end features setion */
+/* start Testimonials section */
+.Testimonials .Testimonials-content .testcard{
+    background-color: #1e1e1e;
+}
+/* end Testimonials section */
+/* start team members section */
+.Team-Members .container .team-content .team-card{
+    color: black;
+}
+/* end team members section */
+/* start Services section */
+.Services .container .Services-content .Services-card{
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px 5px #1e1e1e;
+}
+/* end Services section */
+/* start Skills section */
+.Skills .container .skills-content .stats .stat-all .prog{
+    background-color:white;
+}
+.Skills .container .skills-content .stats .stat-all .prog span::before{
+    background-color: white;
+}
+/* end Skills section */
+/* start work section  */
+.work .container .work-content .work-detail .card{
+    background-color: #1a1919
+}
+.work .container .work-content .work-detail .card::before{
+    background-color: white;
+}
+.work .container .button a:hover{
+    color: white;
+}
+/* end work section  */
+/* start Events section */
+.event .container .form form .button{
+    color:white;
+}
+/* end Events section */
+/* start Pricing section */
+.Pricing{
+    color: white;
+}
+.Pricing .container .card{
+    background-color: #1a1919;
+    box-shadow: 0 12px 20px 0 #1a1919, 0 2px 4px 0 #1a1919;
+}
+.Pricing .container .card .button a:hover{
+    color: white;
+}
+.Pricing .container .advanced-card::before{
+    color: white;
+}
+.Pricing .container .advanced-card::after{
+    background-color: #1a1919;
+}
+.Pricing .container .card .detail p {
+    border-color: var(--sub-color);
+}
+/* end Pricing section */
+/* start stats section */
+.Awesome-stats .title{
+    color: black;
+}
+/* end stats section */
+/* start login page */
+.login{
+    background: linear-gradient(to right,#1a1919 70%, black);
+    color: white;
+}
+.login .container {
+    box-shadow: 0 0 10px 0px black;
+}
+.login .container .part-one .sign-up form input{
+    background-color: white;
+}
+.login .container .part-two h2{
+    color:white;
+}
+footer{
+    background-color: #ececec;
+    color: black;
+}
+footer .container .box:first-child h3{
+    color: var(--main-color);
+}
+footer .container .box:first-child .icon i{
+    background-color: var(--main-color);
+    color: white;
+}
+footer .container .box:first-child .text{
+    color: var(--color-white);
+}
+footer .container .box:nth-child(2) ul li:not(:last-child){
+    border-bottom: 2px solid #1a1919;
+}
+footer .foot{
+    color: white;
+}
+.fixed-button button{
+    color: white;
+}
+/* end login page */

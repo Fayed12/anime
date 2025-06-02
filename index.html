@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!-- main css file -->
     <link rel="stylesheet" href="css/style.css">
+    <link id="stylefile" rel="stylesheet" href="">
     <!-- logo -->
     <link rel="icon" href="images/logo-top.png" type="image/x-icon">
     <!-- font -->
@@ -18,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>4st project(name)</title>
 </head>
-<body>
+<body class="darkmode">
     <!-- start header section -->
     <header id="home">
         <div class="container">
@@ -31,60 +32,61 @@
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#features">Features</a></li>
                     <li class="last-link" id="Otherlinks"><a href="#">Other links</a>
-                    <div class="menu">
-                        <div class="image">
-                            <img src="images/menu.png" alt="menu">
+                        <div class="menu" id="menu">
+                            <div class="image">
+                                <img src="images/menu.png" alt="menu">
+                            </div>
+                            <div class="menu-links">
+                                <ul>
+                                    <li><a href="#Testimonials">
+                                        <i class="fa-solid fa-comments"></i>
+                                        Testimonials</a>
+                                    </li>
+                                    <li><a href="#Team-Members">
+                                        <i class="fa-solid fa-user"></i>
+                                        Team Members </a>
+                                    </li>
+                                    <li><a href="#Services">
+                                        <i class="fa-solid fa-server"></i>
+                                        Services</a>
+                                    </li>
+                                    <li><a href="#skills">
+                                        <i class="fa-regular fa-circle-check"></i>
+                                        Our Skills</a>
+                                    </li>
+                                    <li><a href="#work">
+                                        <i class="fa-regular fa-calendar-minus"></i>
+                                        How It Works</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menu-links">
+                                <ul>
+                                    <li><a href="#event">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        Events</a>
+                                    </li>
+                                    <li><a href="#Pricing">
+                                        <i class="fa-solid fa-server"></i>
+                                        Pricing Plans </a>
+                                    </li>
+                                    <li><a href="#video">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                        Top Videos</a>
+                                    </li>
+                                    <li><a href="#stats">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                        Stats</a>
+                                    </li>
+                                    <li><a href="#login">
+                                        <i class="fa-solid fa-right-to-bracket"></i>
+                                        Login for free</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="menu-links">
-                            <ul>
-                                <li><a href="#Testimonials">
-                                    <i class="fa-solid fa-comments"></i>
-                                    Testimonials</a>
-                                </li>
-                                <li><a href="#Team-Members">
-                                    <i class="fa-solid fa-user"></i>
-                                    Team Members </a>
-                                </li>
-                                <li><a href="#Services">
-                                    <i class="fa-solid fa-server"></i>
-                                    Services</a>
-                                </li>
-                                <li><a href="#skills">
-                                    <i class="fa-regular fa-circle-check"></i>
-                                    Our Skills</a>
-                                </li>
-                                <li><a href="#work">
-                                    <i class="fa-regular fa-calendar-minus"></i>
-                                    How It Works</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="menu-links">
-                            <ul>
-                                <li><a href="#event">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    Events</a>
-                                </li>
-                                <li><a href="#Pricing">
-                                    <i class="fa-solid fa-server"></i>
-                                    Pricing Plans </a>
-                                </li>
-                                <li><a href="#video">
-                                    <i class="fa-regular fa-circle-play"></i>
-                                    Top Videos</a>
-                                </li>
-                                <li><a href="#stats">
-                                    <i class="fa-solid fa-chart-simple"></i>
-                                    Stats</a>
-                                </li>
-                                <li><a href="#login">
-                                    <i class="fa-solid fa-right-to-bracket"></i>
-                                    Login for free</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                     </li>
+                    <button type="button" id="darkmode"><i class="fa-solid fa-moon" id="icon"></i></button>
                 </ul>
             </div>
         </div>
@@ -94,9 +96,9 @@
     <div class="header-section">
         <div class="container">
                 <div class="text">
-                    <h2>Welcome, To <span>My</span> World</h2>
+                    <h2>Welcome, To <span>Anime</span> World</h2>
                     <p>
-                        Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events
+                        We offer a collection of the best anime movies and characters as well.
                     </p>
                 </div>
                 <div class="image">
@@ -121,7 +123,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -131,7 +133,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -141,7 +143,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -151,7 +153,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -161,7 +163,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -171,7 +173,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -181,7 +183,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -191,7 +193,7 @@
                         <h3>Test Title</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
                         <hr>
-                        <a href="#home">Read More</a>
+                        <a href="#Team-Members">Read More</a>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -293,7 +295,7 @@
                         <img src="images/testcard-1.webp" alt="image">
                     </div>
                     <h2>Mohamed Fayed</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Follower</p>
                     <div class="icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -308,7 +310,7 @@
                         <img src="images/testcard-2.webp" alt="image">
                     </div>
                     <h2>Mohamed Esa</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Video Designer</p>
                     <div class="icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -323,7 +325,7 @@
                         <img src="images/testcard-5.webp" alt="image">
                     </div>
                     <h2>Ali Elmasry</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Best follower</p>
                     <div class="icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -338,7 +340,7 @@
                         <img src="images/testcard-4.webp" alt="image">
                     </div>
                     <h2>Shady Mohamed</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Video Editor</p>
                     <div class="icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -353,7 +355,7 @@
                         <img src="images/testcard-5.webp" alt="">
                     </div>
                     <h2>Mohamed Ibrahim</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Company member</p>
                     <div class="icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -368,7 +370,7 @@
                         <img src="images/testcard-6.webp" alt="">
                     </div>
                     <h2>Amr Hendawy</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Series hero</p>
                     <div class="icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -386,7 +388,7 @@
     <div class="Team-Members" id="Team-Members">
         <div class="container">
             <div class="main-head">
-                <h3>Team-Members</h3>
+                <h3>Best scenes</h3>
             </div>
             <div class="team-content">
                 <div class="team-card">
@@ -542,8 +544,8 @@
                     </div>
                 </div>
                 <div class="Services-card">
-                    <i class="fa-solid fa-code fa-4x"></i>
-                    <h3>Coding</h3>
+                    <i class="fa-solid fa-medal fa-4x"></i>
+                    <h3>quality</h3>
                     <div class="text">
                         <a href="#home">Details</a>
                     </div>
@@ -570,7 +572,7 @@
     <div class="Skills" id="skills">
         <div class="container">
             <div class="main-head">
-                <h3>our skills</h3>
+                <h3>rates</h3>
             </div>
             <div class="skills-content">
                 <div class="image">
@@ -578,27 +580,27 @@
                 </div>
                 <div class="stats">
                     <div class="stat-one  stat-all">
-                        <h3>HTML</h3>
+                        <h3>Attack on Titan</h3>
                         <div class="prog">
                             <span style="width: 80%;" data-width="80%"></span>
                         </div>
                     </div>
                     <div class="stat-two stat-all">
-                        <h3>CSS</h3>
+                        <h3>Naruto </h3>
                         <div class="prog">
                             <span style="width: 90%;" data-width="90%"></span>
                         </div>
                     </div>
                     <div class="stat-three stat-all">
-                        <h3>JS</h3>
+                        <h3>Demon Slayer</h3>
                         <div class="prog">
-                            <span style="width: 50%;" data-width="50%" ></span>
+                            <span style="width: 60%;" data-width="60%" ></span>
                         </div>
                     </div>
                     <div class="stat-four stat-all">
-                        <h3>PHP</h3>
+                        <h3>One Piece</h3>
                         <div class="prog">
-                            <span style="width: 60%;" data-width="60%"></span>
+                            <span style="width: 70%;" data-width="70%"></span>
                         </div>
                     </div>
                 </div>
@@ -620,21 +622,21 @@
                     <div class="card">
                         <img src="images/work-detail.jpg" alt="work-detail">
                         <div class="text">
-                            <h3>Business Analysis</h3>
+                            <h3>Login</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="images/work-detail2.jpeg" alt="work-detail">
                         <div class="text">
-                            <h3>Architecture</h3>
+                            <h3>Choose the appropriate series</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="images/work-detail3.jpg" alt="work-detail">
                         <div class="text">
-                            <h3>Developement</h3>
+                            <h3>Enjoy watching</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel</p>
                         </div>
                     </div>
@@ -656,24 +658,24 @@
             <div class="data-title">
                 <div class="time">
                     <div class="card">
-                        <span>10</span>
+                        <span id="days">10</span>
                         <span>Days</span>
                     </div>
                     <div class="card">
-                        <span>7</span>
+                        <span id="hours">7</span>
                         <span>Hours</span>
                     </div>
                     <div class="card">
-                        <span>60</span>
+                        <span id="minutes">30</span>
                         <span>Minutes</span>
                     </div>
                     <div class="card">
-                        <span>30</span>
+                        <span id="seconds">20</span>
                         <span>Seconds</span>
                     </div>
                 </div>
                 <div class="title">
-                    <h3>Tech Masters Event 2025</h3>
+                    <h3>The first show of the series <span id="currentyear">2025</span></h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero tenetur doloremque iusto ut adipisci quam ratione aliquam excepturi nulla in harum, veritatis porro</p>
                 </div>
             </div>
@@ -885,22 +887,22 @@
         <div class="container">
             <div class="box">
                 <i class="fa-solid fa-user"></i>
-                <span>143</span>
+                <span data-counetr="143"  class="spancounter">0</span>
                 <span>Clients</span>
             </div>
             <div class="box">
                 <i class="fa-solid fa-code"></i>
-                <span>120</span>
-                <span>Projects</span>
+                <span data-counetr="531"  class="spancounter">0</span>
+                <span>Subscribers</span>
             </div>
             <div class="box">
                 <i class="fa-solid fa-globe"></i>
-                <span>40</span>
+                <span data-counetr="40"  class="spancounter">0</span>
                 <span>Countries</span>
             </div>
             <div class="box">
                 <i class="fa-solid fa-money-bill-1-wave"></i>
-                <span>600</span>
+                <span data-counetr="600"  class="spancounter">0</span>
                 <span>Money</span>
             </div>
         </div>
@@ -995,6 +997,13 @@
         </div>
     </footer>
     <!-- end footer section -->
+    <!--start buttom up button -->
+    <div class="fixed-button" id="scrollButton">
+        <button type="button" title="up">
+            <i class="fa-solid fa-angles-up"></i>
+        </button>
+    </div>
+    <!--end buttom up button -->
     <script src="main.js"> </script>
 </body>
 </html>
