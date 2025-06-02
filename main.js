@@ -160,11 +160,11 @@ window.onload = setTimeout(() => {
 
 // =================================================================================
 
-// functionalty of loading
+functionalty of loading
 
-// let loading = document.getElementById("loading");
+let loading = document.getElementById("loading");
 
-// window.onload = function () {
-//     loading.style.zIndex = "-100"
-//     loading.style.opacity = "0"
-// };
+window.onload = function () {
+    loading.style.zIndex = "-100"
+    loading.style.opacity = "0"
+};
