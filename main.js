@@ -165,5 +165,6 @@ window.onload = setTimeout(() => {
 let loading = document.getElementById("loading");
 
 window.onload = function () {
-    loading.style.display = "none";
+    loading.style.zIndex = "-100"
+    loading.style.opacity = "0"
 };
