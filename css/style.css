@@ -8,6 +8,7 @@
 }
 body{
     font-family: "Winky Sans", sans-serif;
+    position: relative;
 }
 :root{
     --main-color:#2196f3;
@@ -161,6 +162,37 @@ html{
 }
 /* end main header */
 /* ================================================================================================= */
+/* start loading */
+.loading{
+    position: fixed;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+}
+.loading i{
+    color: var(--main-color);
+    font-size: 75px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: loading 2s linear infinite;
+}
+@keyframes loading {
+    from{
+    transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+.frams{
+    position: fixed;
+    opacity: 0;
+    visibility:hidden;
+}
+/* end loading */
 /* start header section */
 header{
     box-shadow: 0 0 10px 10px #eee;

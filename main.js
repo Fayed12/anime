@@ -46,13 +46,15 @@ let icon = document.getElementById("icon")
 let darkptn = {
     backgroundColor: "black",
     color: "white",
-    icon: "fa-solid fa-moon"
+    icon: "fa-solid fa-moon",
+    darkclass:"darkmode"
 }
 
 let lightptn = {
     backgroundColor: "white",
     color: "black",
-    icon: "fa-solid fa-sun"
+    icon: "fa-solid fa-sun",
+    darkclass: "darkmode"
 }
 
 // get theme from localstorage
@@ -63,6 +65,7 @@ let icontheme = JSON.parse(localStorage.getItem("iconth")) ;
 icon.setAttribute("class", icontheme.icon);
 darkmodeptn.style.backgroundColor = icontheme.backgroundColor;
 darkmodeptn.style.color = icontheme.color;
+document.body.classList.toggle(icontheme.darkclass);
 
 // functions of dark and light mode
 function darkmode() {
@@ -70,14 +73,15 @@ function darkmode() {
     darkmodeptn.style.backgroundColor = darkptn.backgroundColor;
     darkmodeptn.style.color = darkptn.color
     stylefile.removeAttribute("href")
+    document.body.classList.remove("darkmode")
 }
 function lightmode() {
     icon.setAttribute("class", lightptn.icon);
     darkmodeptn.style.backgroundColor = lightptn.backgroundColor
     darkmodeptn.style.color = lightptn.color
-    stylefile.setAttribute("href","css/darkmode.css")
+    stylefile.setAttribute("href", "css/darkmode.css")
+    document.body.classList.add("darkmode")
 }
-
 // event when press the button
 darkmodeptn.addEventListener("click", () => {
     if (icon.classList.contains("fa-moon")) {
@@ -153,3 +157,13 @@ function showSpanData() {
 window.onload = setTimeout(() => {
     showSpanData();
 }, 2000);
+
+// =================================================================================
+
+// functionalty of loading
+
+let loading = document.getElementById("loading");
+
+window.onload = function () {
+    loading.style.display = "none";
+};
