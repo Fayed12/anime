@@ -1,8 +1,0 @@
-1- make the othre links be clickable
-2- make the bottom-up button
-3- make the dark mode
-4- read more go to Team-Members 
-5- Edit the text on the entire site
-6- cursor pointer in some image 
-7- change the skills text
-8- make the website dynamic
